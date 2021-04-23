@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Scenes/road_piece.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Scenes/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Scripts/world.gd" type="Script" id=3]
+[ext_resource path="res://default_env.tres" type="Environment" id=4]
+[ext_resource path="res://Assets/Scenes/train_station.tscn" type="PackedScene" id=5]
+
+[node name="Spatial" type="Spatial"]
+script = ExtResource( 3 )
+
+[node name="road1" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -44 )
+
+[node name="road2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -66 )
+
+[node name="road3" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -22 )
+
+[node name="road4" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -88 )
+
+[node name="road5" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -110 )
+
+[node name="road6" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -132 )
+
+[node name="road7" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -154 )
+
+[node name="train_station" parent="road7" instance=ExtResource( 5 )]
+transform = Transform( 1.70865, 0, 0, 0, 1.97738, 0, 0, 0, 1, 0, 6.1456, 0 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.990526, 0, 0.137324, -0.135825, 0.147326, 0.979718, -0.0202313, -0.989088, 0.14593, 0, 23.4504, 0 )
+light_color = Color( 0.882353, 0.85098, 0.815686, 1 )
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.01283, 2.8904, 0 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 4 )

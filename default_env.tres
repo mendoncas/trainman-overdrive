@@ -1,5 +1,19 @@
 [gd_resource type="Environment" load_steps=2 format=2]
+
 [sub_resource type="ProceduralSky" id=1]
+
 [resource]
 background_mode = 2
 background_sky = SubResource( 1 )
+ambient_light_color = Color( 0.137255, 0.12549, 0.12549, 1 )
+ambient_light_energy = 0.99
+ambient_light_sky_contribution = 0.38
+fog_enabled = true
+fog_color = Color( 0.772549, 0.768627, 0.639216, 1 )
+fog_sun_amount = 0.03
+fog_depth_begin = 60.0
+fog_depth_end = 0.0
+fog_depth_curve = 4.43828
+dof_blur_far_enabled = true
+dof_blur_far_distance = 0.01
+dof_blur_far_transition = 617.48
