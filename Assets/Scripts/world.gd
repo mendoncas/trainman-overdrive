@@ -3,11 +3,6 @@ extends Spatial
 var roads_order = ['3','1','2','4','5','6', '7']
 var index = 1
 
-
-func _ready():
-	var children = get_children()
-	print(children)
-	pass
 	
 func move_road():
 	var road = "road" + roads_order[index - 1]
@@ -26,4 +21,7 @@ func move_road():
 				child.hide()
 				child.set_collision(false)
 
-	pass
+
+func game_over():
+	print("GAME OVER!")
+	get_tree().quit()

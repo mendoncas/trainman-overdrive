@@ -13,5 +13,9 @@ func to_be_moved():
 
 func _on_rail_body_entered(body):
 	if body.name == "player":
+		body.on_rails = false
+
+
+func _on_rail_body_exited(body):
+	if body.name == "player":
 		body.on_rails = true
-	pass # Replace with function body.
